@@ -1,4 +1,4 @@
-# hoop-rush
+# hoop rush v0.8
 Hoop Rush is a fast-paced hyper-casual arcade game where timing is everything.
 
 
