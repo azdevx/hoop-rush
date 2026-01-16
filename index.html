@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+
+  <title>Hoop Rush</title>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+    }
+
+    #unity-canvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      height: 100vh;
+      width: calc(100vh * 9 / 16);
+
+      max-width: 100vw;
+      max-height: calc(100vw * 16 / 9);
+
+      background: #000;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="unity-canvas" tabindex="-1"></canvas>
+
+  <script src="Build/5949b31682aa9fc852cc683464c41103.loader.js"></script>
+
+  <script>
+    createUnityInstance(document.querySelector("#unity-canvas"), {
+      dataUrl: "Build/b88e856539ffe74fffcf360f0bedbc0b.data.br",
+      frameworkUrl: "Build/a9565b4bc6a128d5f42f948f8a716647.framework.js.br",
+      codeUrl: "Build/5fc6b95d0ce1d62bd5634594ccdfe6f6.wasm.br",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "AZDevX",
+      productName: "Hoop Rush",
+      productVersion: "0.7"
+    }).catch((message) => {
+      alert(message);
+    });
+  </script>
+</body>
+</html>
